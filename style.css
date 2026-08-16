@@ -148,14 +148,7 @@ body {
 }
 
 .bottom-features {
-    background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(230,225,220,0.95) 100%);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 16px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: var(--text-dark);
+    display: none; /* Hidden on mobile per user request */
 }
 .feature-item { display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; }
 .feature-item svg { margin-bottom: 8px; width: 24px; height: 24px; stroke: currentColor; }
@@ -334,8 +327,9 @@ body {
         border-radius: 50%;
     }
     
-    /* Desktop bottom features block - Solid dark grey, no dividers */
+    /* Desktop bottom features block */
     .bottom-features {
+        display: flex; /* Bring it back on desktop */
         margin-top: 64px; /* Below CTA */
         margin-bottom: 0;
          backdrop-filter: blur(0px);
