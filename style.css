@@ -681,7 +681,7 @@ body {
     
     .d-card-icon {
         position: absolute;
-        top: 195px; /* Halfway over the image boundary */
+        top: 180px; /* Adjusted to sit on the slanted line */
         left: 24px;
         width: 50px;
         height: 50px;
@@ -696,9 +696,11 @@ body {
     
     .d-card-content {
         background: #fff;
-        padding: 40px 24px 24px;
+        margin-top: -30px; /* Pull it up over the image */
+        padding: 50px 24px 24px; /* Increase top padding to account for the slant peak */
         position: relative;
         z-index: 1;
+        clip-path: polygon(0 30px, 50% 0, 100% 30px, 100% 100%, 0 100%);
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
     }
