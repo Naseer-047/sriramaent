@@ -203,6 +203,8 @@ body {
     line-height: 1.5;
 }
 
+.category-grid-desktop,
+.trust-badges-desktop,
 .desktop-view-all {
     display: none; /* hidden on mobile */
 }
