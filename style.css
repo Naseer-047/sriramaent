@@ -157,6 +157,207 @@ body {
 
 .desktop-br { display: none; }
 
+/* Shop Category Base Styles (Mobile First) */
+.shop-category {
+    background-color: #F9F8F6;
+    padding: 64px 0 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.shop-container {
+    padding: 0 20px;
+}
+
+.shop-header {
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    color: #CFA579;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.shop-title {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.1;
+    color: #12151C;
+    margin-bottom: 16px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.shop-title .dot {
+    color: #E2B659;
+}
+
+.shop-subtitle {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.desktop-view-all {
+    display: none; /* hidden on mobile */
+}
+
+.category-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 24px;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.category-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-card {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 4/5;
+    background-color: #111; /* fallback */
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, transparent 100%);
+    z-index: 2;
+}
+
+.card-content {
+    position: relative;
+    z-index: 3;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto; /* Pushes everything else to bottom */
+}
+
+.cat-card h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    transition: transform 0.3s ease;
+}
+
+.cat-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 16px;
+}
+
+.explore-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #E2B659;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.explore-link svg {
+    transition: transform 0.3s ease;
+}
+
+.color-chips {
+    display: flex;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.color-chips span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Specific styling for the View All card in the grid */
+.card-view-all {
+    background-color: #FFFDF9;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.card-view-all .view-all-content {
+    justify-content: space-between;
+    color: #12151C;
+}
+.view-all-icon {
+    width: 56px;
+    height: 56px;
+    background: #F4EFE6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view-all-text p {
+    color: #666;
+    margin-bottom: 4px;
+}
+.view-all-text h3 {
+    color: #12151C;
+    font-size: 20px;
+}
+.view-all-arrow-circle {
+    width: 40px;
+    height: 40px;
+    background: #12151C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}
+
 /* Mobile Menu Styles */
 .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); z-index: 99; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
 .mobile-menu-overlay.open { opacity: 1; visibility: visible; }
@@ -360,5 +561,110 @@ body {
         font-size: 11px;
         color: rgba(255,255,255,0.6);
         line-height: 1.6;
+    }
+    
+    /* Desktop Shop Category Styles */
+    .shop-category {
+        padding: 120px 0;
+    }
+    .shop-container {
+        padding: 0 8%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    
+    .shop-header-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 56px;
+    }
+    
+    .shop-header {
+        margin-bottom: 0;
+    }
+    
+    .shop-title {
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+    
+    .shop-subtitle {
+        font-size: 18px;
+    }
+    
+    .desktop-view-all {
+        display: block;
+        margin-bottom: 12px;
+    }
+    
+    .view-all-link {
+        font-size: 16px;
+        font-weight: 600;
+        color: #12151C;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #12151C;
+        padding-bottom: 4px;
+        transition: color 0.2s, border-color 0.2s;
+    }
+    .view-all-link:hover {
+        color: #CFA579;
+        border-color: #CFA579;
+    }
+    
+    /* Desktop Bento Grid */
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 320px;
+        gap: 24px;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+    
+    .cat-card {
+        aspect-ratio: auto;
+        flex: none;
+        scroll-snap-align: none;
+    }
+    
+    .card-interior {
+        grid-column: 2 / 4;
+    }
+    
+    .card-content {
+        padding: 32px;
+    }
+    
+    .cat-card h3 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    
+    .cat-card p {
+        font-size: 15px;
+        margin-bottom: 24px;
+        max-width: 80%;
+    }
+    
+    /* Desktop Hover Interactions */
+    .cat-card:hover .card-bg {
+        transform: scale(1.04);
+    }
+    
+    .cat-card:hover h3 {
+        transform: translateX(4px);
+    }
+    
+    .cat-card:hover .explore-link svg {
+        transform: translateX(4px);
+    }
+    
+    .card-view-all:hover .view-all-arrow-circle {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
     }
 }
