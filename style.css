@@ -669,11 +669,17 @@ body {
     
     .d-card-bucket {
         position: absolute;
-        bottom: -15px;
-        right: -15px;
-        width: 120px;
+        top: 125px; /* Overlap image and white area */
+        right: 10px;
+        width: 140px;
         height: auto;
-        z-index: 2;
+        z-index: 4;
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+        transition: transform 0.3s ease;
+    }
+    
+    .desktop-cat-card:hover .d-card-bucket {
+        transform: translateY(-5px) scale(1.02);
     }
     
     .d-card-icon {
