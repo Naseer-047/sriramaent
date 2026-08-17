@@ -484,3 +484,257 @@ body.shop-page {
         padding: 16px;
     }
 }
+/* --- NEW HEADER: TRANSLUCENT WHITE --- */
+.shop-header-white {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    height: 60px !important;
+    border-bottom: 1px solid #eee;
+    padding: 0 4% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shop-header-white .desktop-links a {
+    color: #333 !important;
+    font-size: 13px !important;
+}
+.shop-header-white .desktop-links a.active-link {
+    color: #111 !important;
+    font-weight: 700 !important;
+}
+.shop-header-white .logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.shop-ap-logo {
+    height: 28px;
+    width: auto;
+}
+.mobile-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-search-bar {
+    display: none;
+    padding: 12px 4%;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+.mobile-search-bar input {
+    width: 100%;
+    padding: 10px 10px 10px 36px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-size: 14px;
+}
+.mobile-search-bar svg {
+    position: absolute;
+    left: calc(4% + 12px);
+    margin-top: 10px;
+}
+
+/* Add to Cart styling update (Mobile & Desktop Match) */
+.btn-add-cart {
+    background: #f4f6e5 !important;
+    color: #5a6614 !important;
+    border: 1px solid #f4f6e5 !important;
+}
+.btn-add-cart:hover {
+    background: #eef2d8 !important;
+    border-color: #eef2d8 !important;
+}
+
+/* --- MOBILE RESPONSIVENESS (EXACT MATCH) --- */
+@media (max-width: 991px) {
+    .shop-header-white {
+        height: 56px !important;
+    }
+    .desktop-menu, .profile-icon-btn, .search-icon-btn {
+        display: none !important;
+    }
+    .mobile-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-search-bar {
+        display: block;
+    }
+    
+    .shop-breadcrumbs { margin-top: 16px; margin-bottom: 12px; }
+    .shop-page-title { font-size: 24px; margin-bottom: 4px; }
+    .shop-page-subtitle { font-size: 13px; margin-bottom: 20px; }
+    
+    /* Category Pills Horizontal Scroll */
+    .shop-category-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .shop-category-pills::-webkit-scrollbar { display: none; }
+    
+    /* Discount Section Mobile layout */
+    .discount-section {
+        flex-direction: column;
+        padding: 16px;
+        border-radius: 12px;
+        background: #fdfaf3;
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+    .discount-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .discount-info h2 {
+        font-size: 18px;
+        margin: 0;
+        line-height: 1.2;
+    }
+    .discount-info p { display: none; } /* Hide subtitle on mobile */
+    .discount-info .view-all-link {
+        font-size: 12px;
+    }
+    
+    /* Carousel Cards */
+    .discount-cards {
+        width: 100%;
+        padding-bottom: 8px;
+        gap: 16px;
+    }
+    /* Transform to vertical cards on mobile */
+    .disc-card {
+        flex-direction: column;
+        min-width: 160px;
+        width: 160px;
+        padding: 12px;
+        gap: 8px;
+        position: relative;
+    }
+    .disc-card img {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+    }
+    .disc-badge {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        font-size: 10px;
+        padding: 2px 6px;
+        z-index: 2;
+    }
+    .disc-card-info h5 {
+        font-size: 13px;
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .disc-card-info .price {
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+    .disc-card-info .old-price { font-size: 11px; }
+    .disc-card-info .new-price { font-size: 13px; }
+    .view-product {
+        display: none; /* Mobile mockup shows cart icon instead of 'View Product' link */
+    }
+    
+    /* Products Header Mobile */
+    .products-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        padding-bottom: 8px;
+    }
+    .products-count h2 { font-size: 18px; }
+    .products-count span { display: block; font-size: 12px; }
+    
+    .sort-by {
+        border: 1px solid #eee;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    .view-toggles { display: none; } /* Show filter icon instead */
+    
+    /* 2 Column Grid for Mobile */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .product-card {
+        padding: 12px;
+        border-radius: 8px;
+    }
+    .fav-btn { top: 8px; right: 8px; }
+    .product-img-wrap { height: 100px; margin-bottom: 12px; }
+    .product-badge { font-size: 10px; padding: 2px 6px; margin-bottom: 8px; }
+    .product-title { font-size: 13px; margin-bottom: 4px; }
+    .product-rating { font-size: 11px; margin-bottom: 8px; }
+    .product-rating svg { width: 10px; height: 10px; }
+    .product-price { font-size: 15px; margin-bottom: 4px; }
+    .product-sizes { font-size: 10px; margin-bottom: 12px; }
+    
+    .btn-add-cart {
+        padding: 8px;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+    
+    /* Help CTA Mobile */
+    .help-cta-banner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 16px;
+        gap: 16px;
+    }
+    .help-cta-icon { width: 40px; height: 40px; }
+    .help-cta-info { gap: 12px; width: 100%; }
+    .help-cta-text h4 { font-size: 14px; }
+    .help-cta-text p { font-size: 12px; margin: 0; }
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+.disc-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #737b2d;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+}
+.disc-cart-btn:hover {
+    background: #f4f6e5;
+    border-color: #737b2d;
+}
+
+@media (max-width: 991px) {
+    .disc-cart-btn {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        margin: 0;
+    }
+}
