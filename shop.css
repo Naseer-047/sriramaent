@@ -631,7 +631,7 @@ body.shop-page {
         overflow-x: auto !important;
         padding-bottom: 8px !important;
         gap: 8px !important;
-        width: 100vw;
+        width: auto !important;
         margin-left: -16px; /* Break out of padding */
         padding-left: 16px !important;
         padding-right: 16px !important;
@@ -681,7 +681,8 @@ body.shop-page {
     /* Carousel Cards - PERFECT FIX */
     .discount-cards {
         display: flex !important;
-        width: calc(100vw - 32px) !important;
+        width: auto !important;
+        margin-right: -16px !important;
         margin-left: -16px !important; /* Break out of container */
         padding-left: 16px !important;
         padding-right: 16px !important;
