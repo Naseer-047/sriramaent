@@ -566,29 +566,35 @@ body.shop-page {
     /* Show mobile hamburger, hide desktop logo, ensure alignment */
     .mobile-hamburger {
         display: flex !important;
-        align-items: center;
-        margin-right: 12px;
-        margin-top: 2px;
+        align-items: center !important;
+        margin-right: 12px !important;
+        margin-top: 2px !important;
     }
     .logo {
         display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
     }
     .logo-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
     }
     
     /* Show right icons */
     .header-right-icons {
         display: flex !important;
+        align-items: center !important;
         gap: 8px !important;
     }
     .profile-icon-btn { display: none !important; } /* Hide profile on mobile to save space */
     .search-icon-btn, .cart-btn {
         display: flex !important;
         padding: 4px !important;
+        border: none !important;
+        background: transparent !important;
+        outline: none !important;
     }
 
     .mobile-search-bar {
