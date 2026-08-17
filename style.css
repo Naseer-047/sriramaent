@@ -1615,10 +1615,9 @@ body {
 .final-cta-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('./assets/cta-banner-bg.png');
+    background-image: linear-gradient(rgba(21, 22, 23, 0.9), rgba(21, 22, 23, 0.9)), url('https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     z-index: 1;
 }
 .final-cta-content {
@@ -1726,8 +1725,11 @@ body {
     }
     
     .final-cta {
-        padding: 80px;
+        padding: 80px 4% 80px 8%;
         margin-top: 80px;
+    }
+    .final-cta-bg {
+        background-image: linear-gradient(105deg, #151617 55%, transparent 55%), url('https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
     }
     .final-cta-title { font-size: 48px; }
     .final-cta-desc { font-size: 18px; max-width: 400px; }
