@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="i18n.css">
 </head>
 <body class="shop-page">
 
@@ -37,12 +38,12 @@
         
         <nav class="desktop-menu">
             <ul class="desktop-links">
-                <li><a href="index.html" style="color: inherit;">HOME</a></li>
-                <li><a href="shop-paints.html" style="color: #111;">SHOP PAINTS 
+                <li><a href="index.html" style="color: inherit;"><span data-i18n="nav.home">HOME</span></a></li>
+                <li><a href="shop-paints.html" style="color: #111;"><span data-i18n="nav.shop">SHOP PAINTS</span> 
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px;"><path d="M6 9l6 6 6-6"/></svg>
                 </a></li>
-                <li><a href="explore-colours.html" style="color: #111;">EXPLORE COLOURS</a></li>
-                <li><a href="#" style="color: #111;">OFFERS</a></li>
+                <li><a href="explore-colours.html" style="color: #111;"><span data-i18n="nav.explore">EXPLORE COLOURS</span></a></li>
+                <li><a href="#" style="color: #111;"><span data-i18n="nav.offers">OFFERS</span></a></li>
             </ul>
         </nav>
 
@@ -68,7 +69,7 @@
     
     <div class="mobile-search-bar">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" placeholder="Search paints, colours, products...">
+        <input type="text" placeholder="Search paints, colours, products..." data-i18n-placeholder="shop.searchPlaceholder">
     </div>
 
 
@@ -84,18 +85,18 @@
                 
                 <div class="title-row">
                     <div class="title-left">
-                        <h1 class="shop-page-title">Shop Paints</h1>
-                        <p class="shop-page-subtitle">Find the right paint and essentials for your home.</p>
+                        <h1 class="shop-page-title" data-i18n="shop.title">Shop Paints</h1>
+                        <p class="shop-page-subtitle" data-i18n="shop.subtitle">Find the right paint and essentials for your home.</p>
                     </div>
                     <!-- Top Category Pills -->
                     <div class="shop-category-pills">
-                        <button class="pill active">All</button>
-                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM12 8v8M8 12h8"/></svg> Interior Paints</button>
-                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Exterior Paints</button>
-                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Waterproofing</button>
-                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> Primers</button>
-                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-5.5-3-5.5 3 1.5-6-4.5-4 6-.5z"/></svg> Wood & Metal</button>
-                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Tools & Accessories</button>
+                        <button class="pill active" data-i18n="shop.filters.all">All</button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM12 8v8M8 12h8"/></svg> <span data-i18n="shop.filters.interior">Interior Paints</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> <span data-i18n="shop.filters.exterior">Exterior Paints</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> <span data-i18n="shop.filters.waterproofing">Waterproofing</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> <span data-i18n="shop.filters.primers">Primers</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-5.5-3-5.5 3 1.5-6-4.5-4 6-.5z"/></svg> <span data-i18n="shop.filters.woodMetal">Wood & Metal</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> <span data-i18n="shop.filters.tools">Tools & Accessories</span></button>
                     </div>
                 </div>
 
@@ -103,8 +104,8 @@
                 <div class="discount-section">
                     <div class="discount-info">
                         <h2>Discounted ✨<br>Products</h2>
-                        <p>Limited period offers on<br>best-selling products.</p>
-                        <a href="#" class="view-all-link">View All Offers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p data-i18n="shop.discount.subtitle">Limited period offers on<br>best-selling products.</p>
+                        <a href="#" class="view-all-link"><span data-i18n="shop.discount.viewAll">View All Offers</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                     </div>
                     
                     <div class="discount-cards">
@@ -851,7 +852,7 @@
     <div class="mobile-menu-overlay" id="menuOverlay"></div>
     <nav class="mobile-menu" id="mobileMenu">
         <div class="menu-header">
-            <span class="menu-title">Menu</span>
+            <span class="menu-title" data-i18n="nav.menu">Menu</span>
             <button class="close-btn" id="closeMenuBtn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18M6 6l12 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -859,10 +860,10 @@
             </button>
         </div>
         <ul class="menu-links">
-            <li><a href="index.html">HOME</a></li>
-              <li><a href="shop-paints.html">SHOP PAINTS</a></li>
-            <li><a href="explore-colours.html">EXPLORE COLOURS</a></li>
-            <li><a href="#">OFFERS</a></li>
+            <li><a href="index.html"><span data-i18n="nav.home">HOME</span></a></li>
+              <li><a href="shop-paints.html"><span data-i18n="nav.shop">SHOP PAINTS</span></a></li>
+            <li><a href="explore-colours.html"><span data-i18n="nav.explore">EXPLORE COLOURS</span></a></li>
+            <li><a href="#"><span data-i18n="nav.offers">OFFERS</span></a></li>
         </ul>
     </nav>
 
@@ -980,6 +981,7 @@
             );
         });
     </script>
+    <script src="i18n.js"></script>
 </body>
 
 

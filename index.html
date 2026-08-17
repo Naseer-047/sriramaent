@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="i18n.css">
 </head>
 <body>
     <div class="hero-section">
@@ -29,12 +30,12 @@
             
             <nav class="desktop-menu">
                 <ul class="desktop-links">
-                    <li><a href="index.html" style="color: inherit;">HOME</a></li>
-                <li><a href="shop-paints.html">SHOP PAINTS 
+                    <li><a href="index.html" style="color: inherit;"><span data-i18n="nav.home">HOME</span></a></li>
+                <li><a href="shop-paints.html"><span data-i18n="nav.shop">SHOP PAINTS</span> 
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px;"><path d="M6 9l6 6 6-6"/></svg>
                     </a></li>
-                    <li><a href="explore-colours.html">EXPLORE COLOURS</a></li>
-                    <li><a href="#">OFFERS</a></li>
+                    <li><a href="explore-colours.html"><span data-i18n="nav.explore">EXPLORE COLOURS</span></a></li>
+                    <li><a href="#"><span data-i18n="nav.offers">OFFERS</span></a></li>
                 </ul>
             </nav>
 
@@ -59,7 +60,7 @@
         </header>
 
         <main class="hero-content">
-            <p class="welcome-text">WELCOME TO COLOURWORLD</p>
+            <p class="welcome-text" data-i18n="hero.welcome">WELCOME TO COLOURWORLD</p>
             <div class="gradient-line"></div>
             <h1 class="main-heading">
                 Bring<br>
@@ -803,7 +804,7 @@
     <div class="mobile-menu-overlay" id="menuOverlay"></div>
     <nav class="mobile-menu" id="mobileMenu">
         <div class="menu-header">
-            <span class="menu-title">Menu</span>
+            <span class="menu-title" data-i18n="nav.menu">Menu</span>
             <button class="close-btn" id="closeMenuBtn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18M6 6l12 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -811,10 +812,10 @@
             </button>
         </div>
         <ul class="menu-links">
-            <li><a href="index.html">HOME</a></li>
-              <li><a href="shop-paints.html">SHOP PAINTS</a></li>
-              <li><a href="explore-colours.html">EXPLORE COLOURS</a></li>
-            <li><a href="#">OFFERS</a></li>
+            <li><a href="index.html"><span data-i18n="nav.home">HOME</span></a></li>
+              <li><a href="shop-paints.html"><span data-i18n="nav.shop">SHOP PAINTS</span></a></li>
+              <li><a href="explore-colours.html"><span data-i18n="nav.explore">EXPLORE COLOURS</span></a></li>
+            <li><a href="#"><span data-i18n="nav.offers">OFFERS</span></a></li>
         </ul>
     </nav>
 
@@ -900,6 +901,7 @@
             });
         });
     </script>
+    <script src="i18n.js"></script>
 </body>
 
 </html>

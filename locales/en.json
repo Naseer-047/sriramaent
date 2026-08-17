@@ -1,0 +1,78 @@
+{
+    "nav": {
+        "home": "HOME",
+        "shop": "SHOP PAINTS",
+        "explore": "EXPLORE COLOURS",
+        "offers": "OFFERS",
+        "menu": "Menu"
+    },
+    "hero": {
+        "welcome": "WELCOME TO COLOURWORLD",
+        "title": "Bring Colour To Life.",
+        "subtitle": "Premium paints, finishes and solutions for beautiful spaces.",
+        "btnShop": "Shop Paints",
+        "btnExplore": "Explore Colours"
+    },
+    "shop": {
+        "title": "Shop Paints",
+        "subtitle": "Find the right paint and essentials for your home.",
+        "searchPlaceholder": "Search paints, colours, products...",
+        "filters": {
+            "all": "All",
+            "interior": "Interior Paints",
+            "exterior": "Exterior Paints",
+            "waterproofing": "Waterproofing",
+            "primers": "Primers",
+            "woodMetal": "Wood & Metal",
+            "tools": "Tools & Accessories"
+        },
+        "discount": {
+            "title": "Discounted<br>Products",
+            "subtitle": "Limited period offers on<br>best-selling products.",
+            "viewAll": "View All Offers"
+        },
+        "btnCart": "Add to Cart",
+        "btnBuy": "Buy Now"
+    },
+    "explore": {
+        "title1": "Find a",
+        "title2": "Colour",
+        "title3": "You'll Love.",
+        "subtitle": "Explore beautiful shades and find the perfect colour for your space.",
+        "btnShades": "Explore Shades",
+        "btnVisualize": "Visualize Your Room",
+        "exploreByColor": "Explore by Colour",
+        "viewAll": "View All",
+        "colorsSpace": "Colours for Every Space",
+        "spaces": {
+            "living": "Living Room",
+            "livingSub": "Warm & welcoming",
+            "bedroom": "Bedroom",
+            "bedroomSub": "Calm & relaxing",
+            "exterior": "Exterior",
+            "exteriorSub": "Fresh & lasting"
+        },
+        "seeAlive": "See Your Colour Come Alive"
+    },
+    "details": {
+        "home": "Home",
+        "shop": "Shop Paints",
+        "mrp": "MRP",
+        "chooseSize": "Choose Size",
+        "qty": "Qty",
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now",
+        "delivery": "Delivery Available",
+        "deliverySub": "Check pincode for exact delivery timeline"
+    },
+    "localStore": {
+        "title": "Your Local Paint Partner",
+        "directions": "Get Directions",
+        "call": "Call Store",
+        "hours": "Opening Hours"
+    },
+    "prompt": {
+        "title": "Choose your language",
+        "titleKn": "ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ"
+    }
+}
