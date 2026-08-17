@@ -3,13 +3,56 @@ import productsData from './product-data.js';
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     let productId = urlParams.get('id');
+    let productTitle = urlParams.get('title');
+    let productImg = urlParams.get('img');
+    let productPriceRaw = urlParams.get('price');
     
     // Default fallback for testing if no id provided
-    if (!productId) {
+    if (!productId && !productTitle) {
         productId = 'interior-walls-royale-luxury-emulsion-asian-paints'; 
     }
 
-    const product = productsData.find(p => p.id === productId);
+    let product = null;
+    if (productId) {
+        product = productsData.find(p => p.id === productId);
+    }
+    
+    if (!product && productTitle) {
+        // Find by title in DB
+        product = productsData.find(p => p.title.toLowerCase() === productTitle.toLowerCase());
+        
+        // If STILL not found, generate a mock product on the fly
+        if (!product) {
+            let basePrice = productPriceRaw ? parseInt(productPriceRaw) : 1500;
+            if (isNaN(basePrice)) basePrice = 1500;
+            
+            product = {
+                id: 'mock-' + Math.random().toString(36).substr(2, 9),
+                title: productTitle,
+                subtitle: 'Premium Paint Collection',
+                image: productImg || 'https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-luxury-emulsion-asian-paints.png',
+                badge: 'Popular',
+                badgeClass: 'badge-interior',
+                rating: '4.6',
+                reviews: '128',
+                discount: '10% OFF',
+                price: basePrice,
+                sizes: [
+                    { size: '1L', price: Math.round(basePrice * 0.25) },
+                    { size: '4L', price: basePrice },
+                    { size: '10L', price: Math.round(basePrice * 2.4) },
+                    { size: '20L', price: Math.round(basePrice * 4.5) }
+                ],
+                details: 'This is a premium quality paint offering rich finish and durability. Perfectly formulated to give your walls a luxurious appearance.',
+                howToApply: '1. Prepare the surface by cleaning it thoroughly.<br>2. Apply a coat of primer.<br>3. Apply 2 coats of this paint with a roller or brush.',
+                specifications: [
+                    { label: 'Finish', value: 'Rich Matt' },
+                    { label: 'Coverage', value: '120-140 sq.ft/L/coat' },
+                    { label: 'Drying Time', value: '30 mins (Surface dry)' }
+                ]
+            };
+        }
+    }
 
     if (product) {
         document.getElementById('loadingState').style.display = 'none';
