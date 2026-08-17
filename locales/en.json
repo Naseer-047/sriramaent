@@ -11,7 +11,16 @@
         "title": "Bring Colour To Life.",
         "subtitle": "Premium paints, finishes and solutions for beautiful spaces.",
         "btnShop": "Shop Paints",
-        "btnExplore": "Explore Colours"
+        "btnExplore": "Explore Colours",
+        "title1": "Bring",
+        "title2": "Colour",
+        "title3": "To Life",
+        "subtitle1": "Premium paints, finishes and solutions",
+        "subtitle2": "for beautiful spaces.",
+        "btnShop1": "SHOP",
+        "btnShop2": "PAINTS",
+        "btnExplore1": "EXPLORE",
+        "btnExplore2": "COLOURS"
     },
     "shop": {
         "title": "Shop Paints",
