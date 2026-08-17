@@ -1744,13 +1744,14 @@ body {
 }
  
  /* =========================================================================
-   FOOTER (Exact Match)
+   FOOTER (Exact Match - Dark Theme)
    ========================================================================= */
 .site-footer {
-    background-color: #ffffff;
+    background-color: #0b1120 !important; /* Dark theme to match site */
     font-family: 'Inter', sans-serif;
-    color: #333333;
+    color: #e0e0e0 !important;
     padding: 0 4% 40px;
+    border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .footer-container {
@@ -1768,14 +1769,14 @@ body {
 .footer-line {
     flex: 1;
     height: 1px;
-    background-color: #e0e0e0;
+    background-color: rgba(255,255,255,0.1);
 }
 .footer-top-text {
     padding: 0 24px;
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #555555;
+    color: #a0a0a0;
     font-size: 16px;
     font-style: italic;
     font-family: 'Outfit', sans-serif;
@@ -1804,13 +1805,13 @@ body {
 .footer-brand-title {
     font-size: 20px;
     font-weight: 700;
-    color: #111;
+    color: #ffffff;
     margin-bottom: 12px;
     font-family: 'Outfit', sans-serif;
 }
 .footer-brand-desc {
     font-size: 14px;
-    color: #555;
+    color: #a0a0a0;
     line-height: 1.6;
     margin-bottom: 24px;
 }
@@ -1818,13 +1819,13 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #f3f4e8;
-    color: #111;
+    background-color: rgba(147, 140, 53, 0.15);
+    color: #b5ac3f;
     padding: 8px 12px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
-    border: 1px solid #e1e3ce;
+    border: 1px solid rgba(147, 140, 53, 0.3);
     align-self: flex-start;
 }
 
@@ -1832,7 +1833,7 @@ body {
 .footer-heading {
     font-size: 15px;
     font-weight: 800;
-    color: #111;
+    color: #ffffff;
     margin-bottom: 24px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -1852,7 +1853,7 @@ body {
     gap: 16px;
 }
 .footer-links a {
-    color: #555;
+    color: #a0a0a0;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.2s;
@@ -1869,19 +1870,19 @@ body {
     align-items: flex-start;
 }
 .store-info-row svg {
-    color: #111;
+    color: #938c35;
     flex-shrink: 0;
     margin-top: 2px;
 }
 .store-info-row p {
     font-size: 14px;
-    color: #444;
+    color: #e0e0e0;
     line-height: 1.5;
     margin: 0;
 }
 .store-phone {
     font-weight: 700;
-    color: #111 !important;
+    color: #ffffff !important;
 }
 
 /* Store Buttons */
@@ -1911,8 +1912,8 @@ body {
     border-color: #7a742c;
 }
 .btn-footer-outline {
-    background: #fff;
-    color: #111;
+    background: transparent;
+    color: #ffffff;
     padding: 10px 16px;
     border-radius: 6px;
     font-size: 13px;
@@ -1922,13 +1923,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid rgba(255,255,255,0.2);
     flex: 1;
     transition: all 0.2s;
 }
 .btn-footer-outline:hover {
-    background: #f5f5f5;
-    border-color: #ccc;
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.4);
 }
 
 /* --- Footer Bottom --- */
@@ -1943,7 +1944,7 @@ body {
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 1px;
-    background-color: #e0e0e0;
+    background-color: rgba(255,255,255,0.1);
 }
 .footer-bottom-content {
     display: flex;
@@ -1954,7 +1955,7 @@ body {
 }
 .footer-copyright {
     font-size: 14px;
-    color: #111;
+    color: #a0a0a0;
     font-weight: 500;
     margin: 0;
 }
@@ -1966,7 +1967,7 @@ body {
     gap: 12px;
 }
 .footer-policy-links a {
-    color: #111;
+    color: #a0a0a0;
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
@@ -1976,7 +1977,7 @@ body {
     color: #938c35;
 }
 .footer-policy-links .sep {
-    color: #ccc;
+    color: rgba(255,255,255,0.2);
     font-size: 12px;
 }
 
@@ -1992,7 +1993,7 @@ body {
     margin: 0 auto;
 }
 .footer-socials a {
-    color: #111;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2000,9 +2001,10 @@ body {
     height: 36px;
     border-radius: 50%;
     transition: all 0.2s;
+    background-color: rgba(255,255,255,0.05);
 }
 .footer-socials a:hover {
-    background-color: #f0f0f0;
+    background-color: rgba(255,255,255,0.15);
 }
 .btn-back-to-top {
     background-color: #938c35;
@@ -2043,7 +2045,7 @@ body {
         right: 0;
         bottom: 0;
         width: 1px;
-        background-color: #eaeaea;
+        background-color: rgba(255,255,255,0.1);
     }
     
     .footer-col-brand { padding-left: 0; }
