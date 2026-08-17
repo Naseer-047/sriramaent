@@ -1117,7 +1117,7 @@ body {
     letter-spacing: -1px;
 }
 .vis-paint-it {
-    color: #938c35;
+    color: #111111;
     transition: color 0.4s ease;
 }
 .vis-subtitle {
@@ -1133,7 +1133,7 @@ body {
 .vis-divider {
     width: 48px;
     height: 4px;
-    background: #938c35;
+    background: #111111;
     border-radius: 2px;
     margin: 0 auto 32px auto;
 }
@@ -1162,9 +1162,9 @@ body {
     transition: all 0.2s;
 }
 .vis-tab.active {
-    background: #938c35;
+    background: #111111;
     color: #fff;
-    border-color: #938c35;
+    border-color: #111111;
 }
 .vis-tab.active svg { stroke: #fff; }
 
@@ -1175,7 +1175,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    background-color: #938c35;
+    background-color: #111111;
     transition: background-color 0.4s ease;
 }
 .vis-main-img {
@@ -1234,7 +1234,7 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #938c35;
+    background: #111111;
     transition: background-color 0.4s ease;
 }
 .vis-color-info { flex-grow: 1; }
@@ -1276,7 +1276,7 @@ body {
 }
 .vis-swatch-item.active .vis-swatch {
     border: 2px solid #fff;
-    outline: 2px solid #938c35;
+    outline: 2px solid #111111;
     transform: scale(1.1);
 }
 .vis-swatch-label {
@@ -1287,7 +1287,7 @@ body {
 
 /* Swatch Colors */
 .swatch-c1 { background: #dfc7a7; }
-.swatch-c2 { background: #938c35; }
+.swatch-c2 { background: #111111; }
 .swatch-c3 { background: #f1b27b; }
 .swatch-c4 { background: #a4bdd3; }
 .swatch-c5 { background: #b4b6b6; }
@@ -1298,7 +1298,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: #938c35;
+    background: #111111;
     color: #fff;
     padding: 16px;
     border-radius: 8px;
@@ -1310,7 +1310,7 @@ body {
     margin-bottom: 12px;
     transition: background 0.3s;
 }
-.vis-cta-btn:hover { background: #7c762c; }
+.vis-cta-btn:hover { background: #333333; }
 .vis-cta-footer {
     font-size: 13px;
     color: #777;
@@ -1388,7 +1388,7 @@ body {
         flex: 1;
     }
     .vis-f-icon {
-        color: #938c35;
+        color: #111111;
         background: #f6f3e6;
         padding: 10px;
         border-radius: 10px;
@@ -1436,7 +1436,7 @@ body {
     letter-spacing: -1px;
 }
 .partner-green {
-    color: #938c35;
+    color: #111111;
 }
 .partner-sub {
     font-size: 16px;
@@ -1449,7 +1449,7 @@ body {
 .partner-divider {
     width: 48px;
     height: 3px;
-    background: #938c35;
+    background: #111111;
     border-radius: 2px;
     margin: 24px auto 0 auto;
 }
@@ -1523,7 +1523,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #938c35;
+    color: #111111;
     flex-shrink: 0;
 }
 .partner-info h4 {
@@ -1560,13 +1560,13 @@ body {
     text-decoration: none;
 }
 .btn-partner-primary {
-    background: #938c35;
+    background: #111111;
     color: #fff;
-    border: 1px solid #938c35;
+    border: 1px solid #111111;
 }
 .btn-partner-primary:hover {
-    background: #7c762c;
-    border-color: #7c762c;
+    background: #333333;
+    border-color: #333333;
 }
 .btn-partner-outline {
     background: transparent;
@@ -1574,8 +1574,8 @@ body {
     border: 1px solid #e0e0e0;
 }
 .btn-partner-outline:hover {
-    border-color: #938c35;
-    color: #938c35;
+    border-color: #111111;
+    color: #111111;
 }
 .btn-partner-whatsapp {
     width: 100%;
@@ -1585,7 +1585,7 @@ body {
     gap: 8px;
     padding: 12px;
     background: #f6f3e6;
-    color: #7c762c;
+    color: #333333;
     border-radius: 8px;
     font-size: 13px;
     font-weight: 700;
@@ -1859,7 +1859,7 @@ body {
     transition: color 0.2s;
 }
 .footer-links a:hover {
-    color: #938c35;
+    color: #111111;
 }
 
 /* Store Column */
@@ -1892,7 +1892,7 @@ body {
     margin-top: 24px;
 }
 .btn-footer-primary {
-    background: #938c35;
+    background: #111111;
     color: #fff;
     padding: 10px 16px;
     border-radius: 6px;
@@ -1903,13 +1903,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    border: 1px solid #938c35;
+    border: 1px solid #111111;
     flex: 1;
     transition: all 0.2s;
 }
 .btn-footer-primary:hover {
-    background: #7a742c;
-    border-color: #7a742c;
+    background: #333333;
+    border-color: #333333;
 }
 .btn-footer-outline {
     background: #ffffff;
@@ -1975,7 +1975,7 @@ body {
     transition: color 0.2s;
 }
 .footer-policy-links a:hover {
-    color: #938c35;
+    color: #111111;
 }
 .footer-policy-links .sep {
     color: #ccc;
@@ -2008,7 +2008,7 @@ body {
     background-color: #f0f0f0;
 }
 .btn-back-to-top {
-    background-color: #938c35;
+    background-color: #111111;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -2020,7 +2020,7 @@ body {
     flex-shrink: 0;
 }
 .btn-back-to-top:hover {
-    background-color: #7a742c;
+    background-color: #333333;
 }
 
 /* =========================================================================
