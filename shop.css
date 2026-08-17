@@ -738,3 +738,25 @@ body.shop-page {
         margin: 0;
     }
 }
+
+/* Fixes */
+.disc-cart-btn {
+    align-self: flex-start;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    background: #fdfaf3 !important;
+    border: 1px solid #737b2d !important;
+}
+.mobile-search-bar {
+    width: 100%;
+    box-sizing: border-box;
+}
+.mobile-search-bar input {
+    box-sizing: border-box;
+    width: 100%;
+}
+.logo-text { line-height: 1.1; }
+@media (min-width: 992px) {
+    .mobile-hamburger { display: none !important; }
+}
