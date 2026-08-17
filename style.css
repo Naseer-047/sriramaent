@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1742,7 +1742,8 @@ body {
         width: auto;
     }
 }
- 
+
+ 
  /* =========================================================================
    FOOTER (Exact Match - Dark Theme)
    ========================================================================= */
@@ -1939,6 +1940,7 @@ body {
     gap: 24px;
     padding-top: 32px;
     position: relative;
+    
 }
 .footer-bottom-line {
     position: absolute;
@@ -2073,3 +2075,4 @@ body {
         margin: 0;
     }
 }
+
