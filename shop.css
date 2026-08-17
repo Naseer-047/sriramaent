@@ -744,3 +744,21 @@ body.shop-page {
         flex-direction: column;
     }
 }
+@media (max-width: 991px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+    }
+    .product-card {
+        padding: 16px;
+    }
+    .product-img-wrap {
+        height: 120px;
+    }
+    .product-title {
+        font-size: 14px;
+    }
+    .product-price {
+        font-size: 16px;
+    }
+}
