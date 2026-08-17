@@ -178,7 +178,7 @@
         "visit1": "Asian Paints Colourworld",
         "visit2": "your trusted neighbourhood store",
         "address": "Store Address",
-        "address1": "[Your Shop Address Here]<br>[City, State, Pincode]",
+        "address1": "Kodambahalli, Channapatna Taluk<br>Ramanagara - 562138",
         "hours": "Opening Hours",
         "hours1": "Mon - Sun &bull; 9:30 AM - 8:30 PM",
         "callInfo": "Call us for enquiries & orders",
@@ -197,7 +197,7 @@
         "privacy": "Privacy Policy",
         "terms": "Terms & Conditions",
         "visit": "Visit Us",
-        "address": "[Your Shop Address Here]<br>[City, State, Pincode]",
+        "address": "Kodambahalli, Channapatna Taluk<br>Ramanagara - 562138",
         "rights": "&copy; 2026 Sri Ram Enterprises. All rights reserved."
     }
 }
