@@ -627,21 +627,16 @@ body.shop-page {
     .shop-category-pills {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
+        flex-wrap: wrap !important;
+        overflow-x: visible !important;
         padding-bottom: 8px !important;
         gap: 8px !important;
-        width: auto !important;
-        margin-left: -16px; /* Break out of padding */
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        width: 100% !important;
     }
     .shop-category-pills::-webkit-scrollbar { display: none; }
     .shop-category-pills .pill {
         flex: 0 0 auto !important;
-        white-space: nowrap !important;
+        
         height: auto !important;
         padding: 8px 16px !important;
     }
@@ -680,26 +675,20 @@ body.shop-page {
     
     /* Carousel Cards - PERFECT FIX */
     .discount-cards {
-        display: flex !important;
-        width: auto !important;
-        margin-right: -16px !important;
-        margin-left: -16px !important; /* Break out of container */
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        width: 100% !important;
         gap: 12px !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        overflow-x: visible !important;
     }
     .discount-cards::-webkit-scrollbar { display: none; }
     
     /* Transform to vertical cards on mobile */
     .disc-card {
         flex-direction: column !important;
-        flex: 0 0 160px !important;
-        width: 160px !important;
-        min-width: 160px !important;
+        
+        width: 100% !important;
+        min-width: 100% !important;
         padding: 12px !important;
         gap: 8px !important;
     }
