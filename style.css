@@ -948,17 +948,34 @@ body {
 }
 .pop-price-row {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 6px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
 }
 .pop-price {
     font-size: 20px;
     font-weight: 800;
 }
+.pop-price-old {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+.pop-discount {
+    font-size: 11px;
+    font-weight: 800;
+    color: #d32f2f;
+    background: #feebeb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
+}
 .pop-size-unit {
     font-size: 12px;
     color: #888;
+    margin-left: auto;
 }
 .pop-sizes {
     display: flex;
