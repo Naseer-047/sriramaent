@@ -1118,6 +1118,7 @@ body {
 }
 .vis-paint-it {
     color: #938c35;
+    transition: color 0.4s ease;
 }
 .vis-subtitle {
     font-size: 16px;
@@ -1174,6 +1175,8 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    background-color: #938c35;
+    transition: background-color 0.4s ease;
 }
 .vis-main-img {
     width: 100%;
@@ -1232,6 +1235,7 @@ body {
     height: 44px;
     border-radius: 50%;
     background: #938c35;
+    transition: background-color 0.4s ease;
 }
 .vis-color-info { flex-grow: 1; }
 .vis-color-name { font-size: 16px; font-weight: 800; color: #111; margin-bottom: 2px; }

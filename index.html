@@ -495,27 +495,27 @@
                     <div class="vis-swatch-area">
                         <div class="vis-choose-title">Choose a colour</div>
                         <div class="vis-swatches">
-                            <div class="vis-swatch-item">
+                            <div class="vis-swatch-item" data-color="#dfc7a7" data-name="Warm Sand" data-desc="Warm, inviting and earthy.">
                                 <div class="vis-swatch swatch-c1"></div>
                                 <span class="vis-swatch-label">Warm Sand</span>
                             </div>
-                            <div class="vis-swatch-item active">
+                            <div class="vis-swatch-item active" data-color="#938c35" data-name="Olive Mist" data-desc="Soft, natural and calming.">
                                 <div class="vis-swatch swatch-c2"></div>
                                 <span class="vis-swatch-label">Olive Mist</span>
                             </div>
-                            <div class="vis-swatch-item">
+                            <div class="vis-swatch-item" data-color="#f1b27b" data-name="Soft Peach" data-desc="Gentle, soothing and cheerful.">
                                 <div class="vis-swatch swatch-c3"></div>
                                 <span class="vis-swatch-label">Soft Peach</span>
                             </div>
-                            <div class="vis-swatch-item">
+                            <div class="vis-swatch-item" data-color="#a4bdd3" data-name="Sky Blue" data-desc="Airy, fresh and expansive.">
                                 <div class="vis-swatch swatch-c4"></div>
                                 <span class="vis-swatch-label">Sky Blue</span>
                             </div>
-                            <div class="vis-swatch-item">
+                            <div class="vis-swatch-item" data-color="#b4b6b6" data-name="Stone Grey" data-desc="Modern, neutral and elegant.">
                                 <div class="vis-swatch swatch-c5"></div>
                                 <span class="vis-swatch-label">Stone Grey</span>
                             </div>
-                            <div class="vis-swatch-item">
+                            <div class="vis-swatch-item" data-color="#ffffff" data-name="Pure White" data-desc="Crisp, clean and timeless.">
                                 <div class="vis-swatch swatch-c6"></div>
                                 <span class="vis-swatch-label">Pure White</span>
                             </div>
@@ -530,7 +530,10 @@
 
                 <!-- Right Content (Image) -->
                 <div class="vis-right">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Cinematic Living Room" class="vis-main-img">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="./assets/bg-less-colour-changer-for-pc.png">
+                        <img src="./assets/bg-less-colour-changer-for-mobile.png" alt="Living Room Visualizer" class="vis-main-img">
+                    </picture>
                     
                     <div class="vis-overlay-top-left">Living Room</div>
                     
@@ -635,6 +638,38 @@
         menuBtn.addEventListener('click', openMenu);
         closeBtn.addEventListener('click', closeMenu);
         menuOverlay.addEventListener('click', closeMenu);
+    </script>
+    <script>
+        // Visualizer Color Changer Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const swatches = document.querySelectorAll('.vis-swatch-item');
+            const visRight = document.querySelector('.vis-right');
+            const visColorCircle = document.querySelector('.vis-color-circle');
+            const visColorName = document.querySelector('.vis-color-name');
+            const visColorDesc = document.querySelector('.vis-color-desc');
+            const visPaintItText = document.querySelector('.vis-paint-it');
+
+            // Handle swatch clicks
+            swatches.forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    // Update Active State
+                    swatches.forEach(s => s.classList.remove('active'));
+                    swatch.classList.add('active');
+
+                    // Extract Data
+                    const colorHex = swatch.getAttribute('data-color');
+                    const colorName = swatch.getAttribute('data-name');
+                    const colorDesc = swatch.getAttribute('data-desc');
+
+                    // Update UI Elements
+                    if(visRight) visRight.style.backgroundColor = colorHex;
+                    if(visColorCircle) visColorCircle.style.backgroundColor = colorHex;
+                    if(visColorName) visColorName.textContent = colorName;
+                    if(visColorDesc) visColorDesc.textContent = colorDesc;
+                    if(visPaintItText) visPaintItText.style.color = colorHex;
+                });
+            });
+        });
     </script>
 </body>
 </html>
