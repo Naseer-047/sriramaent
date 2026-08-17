@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1402,7 +1402,7 @@ body {
    ========================================== */
 .partner-section {
     background-color: #fdfaf6;
-    padding: 60px 0 0 0; /* No bottom padding so CTA can attach nicely */
+    padding: 60px 0;
 }
 .partner-container {
     max-width: 1300px;
@@ -1459,7 +1459,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 60px;
 }
 
 /* Left Image */
@@ -1700,7 +1699,7 @@ body {
 
 /* Desktop Overrides */
 @media (min-width: 992px) {
-    .partner-section { padding: 100px 0 0 0; }
+    .partner-section { padding: 100px 0; }
     .partner-heading { font-size: 56px; }
     .partner-sub { font-size: 18px; }
     
