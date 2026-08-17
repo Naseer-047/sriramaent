@@ -1,3 +1,8 @@
+
+.shop-header-white {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #eeeeee;
+}
 /* =========================================================================
    SHOP PAGE SPECIFIC STYLES - 100% WIDTH REDESIGN
    ========================================================================= */
@@ -550,6 +555,32 @@ body.shop-page {
 }
 
 
+
+/* Desktop Cart Button Fix */
+.disc-cart-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdfaf3;
+    border: 1px solid #737b2d;
+    color: #737b2d;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 36px;
+    height: 36px;
+    transition: all 0.2s;
+}
+.disc-cart-btn:hover {
+    background: #737b2d;
+    color: #fff;
+}
+.disc-cart-btn svg {
+    stroke: currentColor;
+}
+
 /* --- MOBILE RESPONSIVENESS (EXACT MATCH) --- */
 @media (max-width: 991px) {
     body.shop-page {
@@ -563,13 +594,6 @@ body.shop-page {
     /* Header layout fixes */
     .desktop-menu { display: none !important; }
     
-    /* Show mobile hamburger, hide desktop logo, ensure alignment */
-    .mobile-hamburger {
-        display: flex !important;
-        align-items: center !important;
-        margin-right: 12px !important;
-        margin-top: 2px !important;
-    }
     .logo {
         display: flex !important;
         flex-direction: row !important;
@@ -580,21 +604,6 @@ body.shop-page {
         flex-direction: column !important;
         justify-content: center !important;
         align-items: flex-start !important;
-    }
-    
-    /* Show right icons */
-    .header-right-icons {
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-    }
-    .profile-icon-btn { display: none !important; } /* Hide profile on mobile to save space */
-    .search-icon-btn, .cart-btn {
-        display: flex !important;
-        padding: 4px !important;
-        border: none !important;
-        background: transparent !important;
-        outline: none !important;
     }
 
     .mobile-search-bar {
