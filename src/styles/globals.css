@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@import "./legacy/style.css";
+@import "./legacy/explore-colours.css";
+@import "./legacy/footer.css";
+@import "./legacy/i18n.css";
+@import "./legacy/product-details.css";
+@import "./legacy/shop.css";
+
+/* Additional React overrides if needed */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure app container is always full width */
+.app-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Remove all default main margin/padding */
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

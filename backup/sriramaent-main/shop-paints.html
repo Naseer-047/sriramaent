@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Paints - Asian Paints</title>
+    <!-- Base styles for fonts and resets -->
+    <link rel="stylesheet" href="style.css?v=8">
+    <!-- Specific styles for Shop page -->
+    <link rel="stylesheet" href="shop.css?v=11">
+    <!-- Footer styles -->
+    <link rel="stylesheet" href="footer.css?v=2">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="i18n.css">
+</head>
+<body class="shop-page">
+
+    <!-- HOME PAGE HEADER -->
+    
+    <!-- WHITE TRANSLUCENT HEADER -->
+        <header class="header shop-header-white">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="16" fill="#1A1A1A"/>
+                    <rect x="14" y="12" width="4" height="16" rx="2" fill="#ffffff"/>
+                    <rect x="22" y="12" width="4" height="16" rx="2" fill="#ffffff"/>
+                </svg>
+            </div>
+            <div class="logo-text">
+                <span class="brand-name" style="color: #111;">Sri Ram</span>
+                <span class="brand-tag" style="color: #555;">Enterprises</span>
+            </div>
+        </div>
+        
+        <nav class="desktop-menu">
+            <ul class="desktop-links">
+                <li><a href="index.html" style="color: inherit;"><span data-i18n="nav.home">HOME</span></a></li>
+                <li><a href="shop-paints.html" style="color: #111;"><span data-i18n="nav.shop">SHOP PAINTS</span> 
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px;"><path d="M6 9l6 6 6-6"/></svg>
+                </a></li>
+                <li><a href="explore-colours.html" style="color: #111;"><span data-i18n="nav.explore">EXPLORE COLOURS</span></a></li>
+                <li><a href="#" style="color: #111;"><span data-i18n="nav.offers">OFFERS</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right-icons">
+            <button class="icon-btn search-icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+            </button>
+            <button class="icon-btn profile-icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </button>
+            <button class="icon-btn cart-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <span class="cart-badge">2</span>
+            </button>
+        </div>
+
+        <button class="menu-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12h18M3 6h18M3 18h18" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </header>
+    
+    <div class="mobile-search-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search paints, colours, products..." data-i18n-placeholder="shop.searchPlaceholder">
+    </div>
+
+
+    <main class="shop-main">
+        <div class="shop-container" style="max-width: 100%;">
+            
+            <section class="shop-content">
+                <div class="shop-breadcrumbs">
+                    <span>Home</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    <span class="current">Shop Paints</span>
+                </div>
+                
+                <div class="title-row">
+                    <div class="title-left">
+                        <h1 class="shop-page-title" data-i18n="shop.title">Shop Paints</h1>
+                        <p class="shop-page-subtitle" data-i18n="shop.subtitle">Find the right paint and essentials for your home.</p>
+                    </div>
+                    <!-- Top Category Pills -->
+                    <div class="shop-category-pills">
+                        <button class="pill active" data-i18n="shop.filters.all">All</button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM12 8v8M8 12h8"/></svg> <span data-i18n="shop.filters.interior">Interior Paints</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> <span data-i18n="shop.filters.exterior">Exterior Paints</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> <span data-i18n="shop.filters.waterproofing">Waterproofing</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> <span data-i18n="shop.filters.primers">Primers</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-5.5-3-5.5 3 1.5-6-4.5-4 6-.5z"/></svg> <span data-i18n="shop.filters.woodMetal">Wood & Metal</span></button>
+                        <button class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> <span data-i18n="shop.filters.tools">Tools & Accessories</span></button>
+                    </div>
+                </div>
+
+                <!-- Discounted Products Section -->
+                <div class="discount-section">
+                    <div class="discount-info">
+                        <h2>Discounted ✨<br>Products</h2>
+                        <p data-i18n="shop.discount.subtitle">Limited period offers on<br>best-selling products.</p>
+                        <a href="#" class="view-all-link"><span data-i18n="shop.discount.viewAll">View All Offers</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </div>
+                    
+                    <div class="discount-cards">
+                        
+                        <div class="disc-card">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Nilaya-Arc-Matt-new.png" alt="Nilaya Arc Matt">
+                            <div class="disc-card-info">
+                                <div class="disc-badge">15% OFF</div>
+                                <h5>Nilaya Arc Matt</h5>
+                                <div class="price">
+                                    <span class="old-price">₹1,150</span>
+                                    <span class="new-price">₹1,000</span>
+                                </div>
+                                <button class="disc-cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                            </div>
+                        </div>
+
+                        <div class="disc-card">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Nilaya-Arc-Pearlescent-new.png" alt="Nilaya Arc Pearlescent">
+                            <div class="disc-card-info">
+                                <div class="disc-badge">12% OFF</div>
+                                <h5>Nilaya Arc Pearlescent</h5>
+                                <div class="price">
+                                    <span class="old-price">₹1,207</span>
+                                    <span class="new-price">₹1,050</span>
+                                </div>
+                                <button class="disc-cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                            </div>
+                        </div>
+
+                        <div class="disc-card">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-aspira-luxury-emulsion-asian-paints.png" alt="Royale Aspira Luxury Emulsion">
+                            <div class="disc-card-info">
+                                <div class="disc-badge">10% OFF</div>
+                                <h5>Royale Aspira Luxury Emulsion</h5>
+                                <div class="price">
+                                    <span class="old-price">₹1,265</span>
+                                    <span class="new-price">₹1,100</span>
+                                </div>
+                                <button class="disc-cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                            </div>
+                        </div>
+
+                        <div class="disc-card">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/royale-glitz-new-packshot.png" alt="Royale Glitz">
+                            <div class="disc-card-info">
+                                <div class="disc-badge">8% OFF</div>
+                                <h5>Royale Glitz</h5>
+                                <div class="price">
+                                    <span class="old-price">₹1,322</span>
+                                    <span class="new-price">₹1,150</span>
+                                </div>
+                                <button class="disc-cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Products Header -->
+                <div class="products-header">
+                    <div class="products-count">
+                        <h2>All Paints & Products</h2>
+                        <span>124 Products</span>
+                    </div>
+                    <div class="products-controls">
+                        <div class="sort-by">
+                            Sort by: <strong>Popular</strong>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="view-toggles">
+                            <button class="view-toggle active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button>
+                            <button class="view-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid">
+                    
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Nilaya-Arc-Matt-new.png" alt="Nilaya Arc Matt">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Nilaya Arc Matt</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.8</strong> (120)
+                        </div>
+                        <div class="product-price">₹1,000</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Nilaya-Arc-Pearlescent-new.png" alt="Nilaya Arc Pearlescent">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Nilaya Arc Pearlescent</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.7</strong> (131)
+                        </div>
+                        <div class="product-price">₹1,050</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-aspira-luxury-emulsion-asian-paints.png" alt="Royale Aspira Luxury Emulsion">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Royale Aspira Luxury Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.6</strong> (142)
+                        </div>
+                        <div class="product-price">₹1,100</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/royale-glitz-new-packshot.png" alt="Royale Glitz">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Royale Glitz</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.5</strong> (153)
+                        </div>
+                        <div class="product-price">₹1,150</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/royale-glitz-reserv-new-packshot.png" alt="Royale Glitz Reserv">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Royale Glitz Reserv</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.4</strong> (164)
+                        </div>
+                        <div class="product-price">₹1,200</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/royale-glitz-ultra-matt-new-packshot.png" alt="Royale Glitz Ultra Matt">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Royale Glitz Ultra Matt</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.8</strong> (175)
+                        </div>
+                        <div class="product-price">₹1,250</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-shyne-luxury-emulsion-asian-paints.png" alt="Royale Shyne Luxury Emulsion">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Royale Shyne Luxury Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.7</strong> (186)
+                        </div>
+                        <div class="product-price">₹1,300</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-matt-asian-paints.png" alt="Royale Matt">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Royale Matt</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.6</strong> (197)
+                        </div>
+                        <div class="product-price">₹1,350</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-advanced-packshot-asian-paints.png" alt="Royale Advanced">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Royale Advanced</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.5</strong> (208)
+                        </div>
+                        <div class="product-price">₹1,400</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/luxury-emulsion-shyne-advanced-ps-royale.png" alt="Luxury Emulsion Shyne Advanced Ps Royale">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Luxury Emulsion Shyne Advanced Ps Royale</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.4</strong> (219)
+                        </div>
+                        <div class="product-price">₹1,450</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-luxury-emulsion-asian-paints.png" alt="Royale Luxury Emulsion">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Royale Luxury Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.8</strong> (230)
+                        </div>
+                        <div class="product-price">₹1,500</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-lustre-asian-paints.png" alt="Royale Lustre">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Royale Lustre</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.7</strong> (241)
+                        </div>
+                        <div class="product-price">₹1,550</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-apcolite-all-protek-shyne-packshot-asian-paints.png" alt="Apcolite All Protek Shyne">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Apcolite All Protek Shyne</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.6</strong> (252)
+                        </div>
+                        <div class="product-price">₹1,600</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-apcolite-all-protek-matt-packshot-asian-paints.png" alt="Apcolite All Protek Matt">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Apcolite All Protek Matt</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.5</strong> (263)
+                        </div>
+                        <div class="product-price">₹1,650</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/shyne-premium-emulsion.png" alt="Shyne Premium Emulsion">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Shyne Premium Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.4</strong> (274)
+                        </div>
+                        <div class="product-price">₹1,700</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-apcolite-advanced-heavy-duty-emulsion-asian-paints.png" alt="Apcolite Advanced Heavy Duty Emulsion">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Apcolite Advanced Heavy Duty Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.8</strong> (285)
+                        </div>
+                        <div class="product-price">₹1,750</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-apcolite-premium-satin-emulsion-asian-paints.png" alt="Apcolite Premium Satin Emulsion">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Apcolite Premium Satin Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.7</strong> (296)
+                        </div>
+                        <div class="product-price">₹1,800</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/apcolite-premium-emulsion-new-packshot.png" alt="Apcolite Premium Emulsion">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Apcolite Premium Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.6</strong> (307)
+                        </div>
+                        <div class="product-price">₹1,850</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-emulsion-shyne-asian-paints.png" alt="Tractor Emulsion Shyne">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Tractor Emulsion Shyne</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.5</strong> (318)
+                        </div>
+                        <div class="product-price">₹1,900</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Tractor-Shyne-Advanced.png" alt="Tractor Shyne Advanced">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Tractor Shyne Advanced</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.4</strong> (329)
+                        </div>
+                        <div class="product-price">₹1,950</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-emulsion-advanced-asian-paints.png" alt="Tractor Emulsion Advanced">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Tractor Emulsion Advanced</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.8</strong> (340)
+                        </div>
+                        <div class="product-price">₹2,000</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-emulsion-asian-paints.png" alt="Tractor Emulsion">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Tractor Emulsion</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.7</strong> (351)
+                        </div>
+                        <div class="product-price">₹2,050</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Tractor-emulsion-Ultraa-packshot.png" alt="Tractor Emulsion Ultraa">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Tractor Emulsion Ultraa</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.6</strong> (362)
+                        </div>
+                        <div class="product-price">₹2,100</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-sparc-advanced-packshot-asian-paints.png" alt="Tractor Sparc Advanced">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Tractor Sparc Advanced</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.5</strong> (373)
+                        </div>
+                        <div class="product-price">₹2,150</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-sparc-asian-paints.png" alt="Tractor Sparc">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Tractor Sparc</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.4</strong> (384)
+                        </div>
+                        <div class="product-price">₹2,200</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Tractor-Sparc-Shyne.png" alt="Tractor Sparc Shyne">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Tractor Sparc Shyne</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.8</strong> (395)
+                        </div>
+                        <div class="product-price">₹2,250</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/neobharat.png" alt="Neobharat">
+                        </div>
+                        <div class="product-badge badge-waterproofing">Waterproofing</div>
+                        <h3 class="product-title">Neobharat</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.7</strong> (406)
+                        </div>
+                        <div class="product-price">₹2,300</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-aqualock-asian-paints.png" alt="Tractor Aqualock">
+                        </div>
+                        <div class="product-badge badge-interior">Interior</div>
+                        <h3 class="product-title">Tractor Aqualock</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.6</strong> (417)
+                        </div>
+                        <div class="product-price">₹2,350</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <div class="product-img-wrap">
+                            <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-uno-asian-paints.png" alt="Tractor Uno">
+                        </div>
+                        <div class="product-badge badge-exterior">Exterior</div>
+                        <h3 class="product-title">Tractor Uno</h3>
+                        <div class="product-rating">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <strong>4.5</strong> (428)
+                        </div>
+                        <div class="product-price">₹2,400</div>
+                        <div class="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Help CTA Banner -->
+                <div class="help-cta-banner">
+                    <div class="help-cta-info">
+                        <div class="help-cta-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                        </div>
+                        <div class="help-cta-text">
+                            <h4>Need help choosing the right paint?</h4>
+                            <p>Talk to our store team for expert advice.</p>
+                        </div>
+                    </div>
+                    <button class="btn-whatsapp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        Chat on WhatsApp
+                    </button>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER HTML -->
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-line"></div>
+                <div class="footer-top-text">
+                    <i>Colour your world. One shade at a time.</i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M11 16H8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-3"></path><circle cx="12" cy="16" r="1"></circle><path d="M12 17v5"></path><path d="M10 22h4"></path></svg>
+                </div>
+                <div class="footer-line"></div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-col footer-col-brand">
+                    <h3 class="footer-brand-title">Your Local Paint Partner.</h3>
+                    <p class="footer-brand-desc">Quality paints and trusted<br>Asian Paints products for<br>homes and spaces around you.</p>
+                    <div class="footer-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                        An Asian Paints Colourworld Store
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">SHOP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Interior Paints</a></li>
+                        <li><a href="#">Exterior Paints</a></li>
+                        <li><a href="#">Waterproofing</a></li>
+                        <li><a href="#">Painting Essentials</a></li>
+                        <li><a href="#">All Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">HELP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-store">
+                    <h4 class="footer-heading store-heading">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 
+                        VISIT OUR STORE
+                    </h4>
+                    <div class="store-info-row">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                        <p>123, 1st Main Road, HSR Layout,<br>Sector 2, Bengaluru - 560102,<br>Karnataka, India</p>
+                    </div>
+                    <div class="store-info-row">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <p>Mon - Sun : 9:30 AM - 8:30 PM</p>
+                    </div>
+                    <div class="store-info-row">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <p class="store-phone">+91 98765 43210</p>
+                    </div>
+                    <div class="store-actions">
+                        <a href="#" class="btn-footer-primary">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                            Get Directions
+                        </a>
+                        <a href="#" class="btn-footer-outline">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            Call Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-line"></div>
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2026 Your Store Name. All rights reserved.</p>
+                    <div class="footer-policy-links">
+                        <a href="#">Privacy Policy</a>
+                        <span class="sep">|</span>
+                        <a href="#">Terms & Conditions</a>
+                        <span class="sep">|</span>
+                        <a href="#">Shipping Policy</a>
+                        <span class="sep">|</span>
+                        <a href="#">Return Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="mobile-menu-overlay" id="menuOverlay"></div>
+    <nav class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <span class="menu-title" data-i18n="nav.menu">Menu</span>
+            <button class="close-btn" id="closeMenuBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="menu-links">
+            <li><a href="index.html"><span data-i18n="nav.home">HOME</span></a></li>
+              <li><a href="shop-paints.html"><span data-i18n="nav.shop">SHOP PAINTS</span></a></li>
+            <li><a href="explore-colours.html"><span data-i18n="nav.explore">EXPLORE COLOURS</span></a></li>
+            <li><a href="#"><span data-i18n="nav.offers">OFFERS</span></a></li>
+                <li class="language-toggle-mobile" style="margin-top:20px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px;">
+                    <div style="font-size: 14px; color: #555; margin-bottom: 12px;" data-i18n="prompt.title">Select Language / ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</div>
+                    <div style="display: flex; gap: 12px;">
+                        <button onclick="changeLanguage('en')" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ddd; background: #fff; font-family: var(--font-body); font-weight: 500; cursor: pointer;">English</button>
+                        <button onclick="changeLanguage('kn')" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ddd; background: #fff; font-family: var(--font-body); font-weight: 500; cursor: pointer;">ಕನ್ನಡ</button>
+                    </div>
+                </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.menu-btn');
+            const closeBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            if (menuBtn && closeBtn && mobileMenu && menuOverlay) {
+                function openMenu() {
+                    mobileMenu.classList.add('open');
+                    menuOverlay.classList.add('open');
+                    document.body.style.overflow = 'hidden'; 
+                }
+
+                function closeMenu() {
+                    mobileMenu.classList.remove('open');
+                    menuOverlay.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+
+                menuBtn.addEventListener('click', openMenu);
+                closeBtn.addEventListener('click', closeMenu);
+                menuOverlay.addEventListener('click', closeMenu);
+            }
+        });
+    </script>
+
+    <script type="module">
+        import productsData from './product-data.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const productGrid = document.getElementById('productGrid');
+            if (productGrid) {
+                productsData.forEach(p => {
+                    // Create card
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.innerHTML = `
+                        <button class="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                        <a href="product-details.html?id=${p.id}" style="text-decoration:none; color:inherit; display:block;">
+                            <div class="product-img-wrap">
+                                <img src="${p.image}" alt="${p.title}">
+                            </div>
+                            <div class="product-badge ${p.badgeClass}">${p.badge}</div>
+                            <h3 class="product-title">${p.title}</h3>
+                            <div class="product-rating">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <strong>${p.rating}</strong> (${p.reviews})
+                            </div>
+                            <div class="product-price">₹${p.price.toLocaleString('en-IN')}</div>
+                            <div class="product-sizes">Sizes: ${p.sizes.map(s => s.size).join(' • ')}</div>
+                        </a>
+                        <button class="btn-add-cart">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Add to Cart
+                        </button>
+                    `;
+                    productGrid.appendChild(card);
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to attach click listeners
+            const attachLink = (elements, titleSelector, imgSelector, priceSelector, excludeSelectors) => {
+                elements.forEach(card => {
+                    card.querySelectorAll('a').forEach(a => a.removeAttribute('href'));
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', (e) => {
+                        for (let sel of excludeSelectors) {
+                            if (e.target.closest(sel)) return;
+                        }
+                        
+                        const titleEl = card.querySelector(titleSelector);
+                        const imgEl = card.querySelector(imgSelector);
+                        const priceEl = card.querySelector(priceSelector);
+                        
+                        if (titleEl) {
+                            const title = encodeURIComponent(titleEl.innerText.trim());
+                            const img = imgEl ? encodeURIComponent(imgEl.src) : '';
+                            
+                            let price = '1500';
+                            if (priceEl && priceEl.innerText.includes('₹')) {
+                                const rawPrice = priceEl.innerText.replace(/[^0-9]/g, '');
+                                if (rawPrice) price = rawPrice;
+                            }
+                            
+                            window.location.href = `product-details.html?title=${title}&img=${img}&price=${price}`;
+                        }
+                    });
+                });
+            };
+
+            // Regular product cards
+            attachLink(
+                document.querySelectorAll('.product-card'), 
+                '.product-title', 
+                '.product-img-wrap img', 
+                '.product-price', 
+                ['.btn-add-cart', '.fav-btn']
+            );
+
+            // Discounted cards
+            attachLink(
+                document.querySelectorAll('.disc-card'), 
+                'h5', 
+                'img', 
+                '.new-price', 
+                ['.disc-cart-btn']
+            );
+        });
+    </script>
+    <script src="i18n.js"></script>
+</body>
+
+
+</html>
