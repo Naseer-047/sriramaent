@@ -19,10 +19,19 @@ mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
 
+let productsCache = null;
+let lastCacheTime = 0;
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
 // API Endpoints
 app.get('/api/products', async (req, res) => {
   try {
-    const products = await Product.find({});
+    if (productsCache && (Date.now() - lastCacheTime < CACHE_TTL)) {
+      return res.json(productsCache);
+    }
+    const products = await Product.find({}).lean();
+    productsCache = products;
+    lastCacheTime = Date.now();
     res.json(products);
   } catch (error) {
     res.status(500).json({ message: 'Error fetching products', error: error.message });
@@ -58,6 +67,8 @@ app.put('/api/products/:id', async (req, res) => {
       { $set: updateData },
       { new: true }
     );
+
+    productsCache = null; // Invalidate cache after update
 
     if (!updatedProduct) {
       return res.status(404).json({ message: 'Product not found' });

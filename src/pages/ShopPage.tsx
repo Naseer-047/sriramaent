@@ -6,8 +6,10 @@ export default function ShopPage() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const [productsData, setProductsData] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch('/api/products')
       .then(res => res.json())
       .then(data => {
@@ -17,6 +19,9 @@ export default function ShopPage() {
       })
       .catch(err => {
         console.error('Error fetching products:', err);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
@@ -112,39 +117,51 @@ export default function ShopPage() {
                 </div>
                 {/* Product Grid */}
                 <div className="product-grid">
-                    {productsData.map((prod) => (
-                        <div key={prod.id} className="product-card" onClick={() => handleProductClick(prod.id)} style={{ cursor: "pointer" }}>
-                            <button className="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg></button>
-                            <div className="product-img-wrap">
-                                <img src={prod.image} alt={prod.title} />
-                            </div>
-                            <div className={`product-badge ${prod.badgeClass}`}>{prod.badge}</div>
-                            <h3 className="product-title">{prod.title}</h3>
-                            <div className="product-rating">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                                <strong>{prod.rating}</strong> ({prod.reviews})
-                            </div>
-                            <div className="product-price">₹{prod.price}</div>
-                            <div className="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
-                            <button 
-                                className="btn-add-cart"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    addToCart({
-                                        id: prod.id,
-                                        name: prod.title,
-                                        price: prod.price,
-                                        quantity: 1,
-                                        image: prod.image,
-                                        size: prod.sizes?.[0]?.size
-                                    });
-                                }}
-                            >
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>
-                                Add to Cart
-                            </button>
+                    {isLoading ? (
+                        <div style={{ padding: '40px', gridColumn: '1/-1', textAlign: 'center', color: '#666' }}>
+                            <div className="loading-spinner" style={{ display: 'inline-block', width: '40px', height: '40px', border: '4px solid #f3f3f3', borderTop: '4px solid #737b2d', borderRadius: '50%', animation: 'spin 1s linear infinite', marginBottom: '16px' }}></div>
+                            <p>Loading products...</p>
+                            <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
                         </div>
-                    ))}
+                    ) : productsData.length === 0 ? (
+                        <div style={{ padding: '40px', gridColumn: '1/-1', textAlign: 'center', color: '#666' }}>
+                            <p>No products found.</p>
+                        </div>
+                    ) : (
+                        productsData.map((prod) => (
+                            <div key={prod.id} className="product-card" onClick={() => handleProductClick(prod.id)} style={{ cursor: "pointer" }}>
+                                <button className="fav-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg></button>
+                                <div className="product-img-wrap">
+                                    <img src={prod.image} alt={prod.title} />
+                                </div>
+                                <div className={`product-badge ${prod.badgeClass}`}>{prod.badge}</div>
+                                <h3 className="product-title">{prod.title}</h3>
+                                <div className="product-rating">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#F0BC51" stroke="#F0BC51" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <strong>{prod.rating}</strong> ({prod.reviews})
+                                </div>
+                                <div className="product-price">₹{prod.price}</div>
+                                <div className="product-sizes">Sizes: 1L &bull; 4L &bull; 10L &bull; 20L</div>
+                                <button 
+                                    className="btn-add-cart"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        addToCart({
+                                            id: prod.id,
+                                            name: prod.title,
+                                            price: prod.price,
+                                            quantity: 1,
+                                            image: prod.image,
+                                            size: prod.sizes?.[0]?.size
+                                        });
+                                    }}
+                                >
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        ))
+                    )}
                 </div>
 
                 {/* Help CTA Banner */}
