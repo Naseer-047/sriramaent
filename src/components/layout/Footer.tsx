@@ -103,7 +103,7 @@ export default function Footer() {
                         <span className="sep">|</span>
                         <Link to="#">Shipping Policy</Link>
                         <span className="sep">|</span>
-                        <Link to="#">Return Policy</Link>
+                        <Link to="/admin.html" style={{ color: '#E2B659' }}>Admin Login</Link>
                     </div>
                 </div>
                 

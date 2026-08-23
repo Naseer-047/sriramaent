@@ -20,7 +20,7 @@ body.shop-page {
     width: 100%;
 }
 
-.shop-main {
+body.shop-page main {
     padding-top: 40px;
     padding-bottom: 80px;
 }
@@ -318,6 +318,7 @@ body.shop-page {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    transform: translateX(12px); /* Visually center the image to offset right-side drop shadow */
 }
 .product-badge {
     align-self: flex-start;

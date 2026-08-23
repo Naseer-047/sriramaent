@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import LanguageManager from '@/components/LanguageManager';
 
 function useMediaQuery(query: string) {
   // Read initial value synchronously to prevent flash
@@ -27,6 +28,7 @@ export default function PageContainer() {
 
   return (
     <div className="app-container">
+      <LanguageManager />
       {!hideNavbar && <Navbar />}
       <main style={{ width: '100%', margin: 0, padding: 0 }}>
         <Outlet />

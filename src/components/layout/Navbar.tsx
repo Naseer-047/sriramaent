@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import i18n from '../../i18n';
+import { useTranslation } from 'react-i18next';
 import { useCart } from '../../store/CartContext';
 
 // Custom Hook for Media Query
@@ -16,6 +16,7 @@ function useMediaQuery(query: string) {
 }
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const isHome = location.pathname === '/';
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -25,11 +26,25 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   // Desktop search state
   const [searchOpen, setSearchOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  // Refs for clicking outside
   const searchInputRef = useRef<HTMLInputElement>(null);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
+  const langMenuRef = useRef<HTMLDivElement>(null);
 
   // Auth state
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Scroll state for transparent navbar
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
@@ -38,6 +53,17 @@ export default function Navbar() {
     };
     window.addEventListener('auth-change', handleAuthChange);
     return () => window.removeEventListener('auth-change', handleAuthChange);
+  }, []);
+
+  // Click outside to close lang dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+        setLangMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   // Wire up hamburger menu to DOM elements via useEffect (replicating the original JS logic exactly)
@@ -68,6 +94,7 @@ export default function Navbar() {
   // Reset menu on route change
   useEffect(() => {
     setMenuOpen(false);
+    setLangMenuOpen(false);
   }, [location.pathname]);
 
   // ==================== DESKTOP NAVBAR ====================
@@ -111,11 +138,7 @@ export default function Navbar() {
                 flexShrink: 0,
               }}
             >
-              <svg viewBox="0 0 40 40" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="16" fill={isTransparent ? '#ffffff' : '#1A1A1A'} />
-                <rect x="14" y="12" width="4" height="16" rx="2" fill={isTransparent ? '#1A1A1A' : '#ffffff'} />
-                <rect x="22" y="12" width="4" height="16" rx="2" fill={isTransparent ? '#1A1A1A' : '#ffffff'} />
-              </svg>
+
               <span
                 style={{
                   fontFamily: 'var(--font-heading)',
@@ -144,10 +167,10 @@ export default function Navbar() {
               >
                 {(() => {
    const navLinks: { label: string, to: string, icon?: React.ReactNode, arrow?: boolean }[] = [
-    { label: 'HOME', to: '/' },
-    { label: 'SHOP PAINTS', to: '/shop-paints.html' },
-    { label: 'EXPLORE COLOURS', to: '/explore-colours.html' },
-    { label: 'OFFERS', to: '#' },
+    { label: t('nav.home'), to: '/' },
+    { label: t('nav.shop'), to: '/shop-paints.html' },
+    { label: t('nav.explore'), to: '/explore-colours.html' },
+    { label: t('nav.offers'), to: '#' },
   ]; return navLinks;
 })().map((link, i) => (
                   <li key={i}>
@@ -218,6 +241,92 @@ export default function Navbar() {
                     <path d="M21 21l-4.3-4.3" />
                   </svg>
                 </button>
+              </div>
+
+              {/* Language Dropdown */}
+              <div 
+                style={{ position: 'relative' }} 
+                ref={langMenuRef}
+                onMouseEnter={() => setLangMenuOpen(true)}
+                onMouseLeave={() => setLangMenuOpen(false)}
+              >
+                <button
+                  className="lang-btn"
+                  onClick={() => setLangMenuOpen(!langMenuOpen)}
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    color: isTransparent ? '#fff' : '#111',
+                    fontWeight: 700,
+                    fontSize: '13px',
+                    fontFamily: 'var(--font-heading)',
+                  }}
+                >
+                  <span className="current-lang-label">{i18n.language === 'kn' ? 'ಕನ್ನಡ' : 'EN'}</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6" /></svg>
+                </button>
+                <div
+                  className={`lang-menu ${langMenuOpen ? 'show' : ''}`}
+                  style={{
+                    position: 'absolute',
+                    top: '100%',
+                    right: 0,
+                    marginTop: '8px',
+                    background: '#fff',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                    border: '1px solid #eee',
+                    overflow: 'hidden',
+                    zIndex: 100,
+                    minWidth: '100px',
+                  }}
+                >
+                  <div
+                    className="lang-option"
+                    onClick={() => {
+                      i18n.changeLanguage('en');
+                      localStorage.setItem('site_lang', 'en');
+                      setLangMenuOpen(false);
+                    }}
+                    style={{
+                      padding: '10px 16px',
+                      cursor: 'pointer',
+                      fontSize: '13px',
+                      fontWeight: 600,
+                      borderBottom: '1px solid #eee',
+                      transition: 'background 0.2s',
+                      color: '#111'
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = '#f5f5f5')}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = '#fff')}
+                  >
+                    English
+                  </div>
+                  <div
+                    className="lang-option"
+                    onClick={() => {
+                      i18n.changeLanguage('kn');
+                      localStorage.setItem('site_lang', 'kn');
+                      setLangMenuOpen(false);
+                    }}
+                    style={{
+                      padding: '10px 16px',
+                      cursor: 'pointer',
+                      fontSize: '13px',
+                      fontWeight: 600,
+                      transition: 'background 0.2s',
+                      color: '#111'
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = '#f5f5f5')}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = '#fff')}
+                  >
+                    ಕನ್ನಡ
+                  </div>
+                </div>
               </div>
 
               {/* Cart */}
@@ -319,21 +428,27 @@ export default function Navbar() {
 
   // ==================== MOBILE NAVBAR ====================
   const headerClass = isHome ? 'header' : 'header shop-header-white';
+  
+  // Mobile navbar should be completely transparent when at the top of the Home page,
+  // but become blurred (hamburger menu style) when scrolled down.
   const headerStyle: React.CSSProperties = isHome
-    ? { position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }
+    ? { 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        right: 0, 
+        zIndex: 100, 
+        background: scrolled ? 'rgba(0, 0, 0, 0.5)' : 'transparent', 
+        backdropFilter: scrolled ? 'blur(4px)' : 'none',
+        transition: 'background 0.3s ease, backdrop-filter 0.3s ease'
+      }
     : { position: 'sticky', top: 0, zIndex: 100 };
 
   return (
     <>
       <header className={headerClass} style={headerStyle}>
         <div className="logo">
-          <div className="logo-icon">
-            <svg viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="16" fill="#f6f1f1ff" />
-              <rect x="14" y="12" width="4" height="16" rx="2" fill="#1A1A1A" />
-              <rect x="22" y="12" width="4" height="16" rx="2" fill="#1A1A1A" />
-            </svg>
-          </div>
+
           <div className="logo-text">
             <span className="brand-name">Sri Ram <span className="brand-tag"> Enterprises</span></span>
             

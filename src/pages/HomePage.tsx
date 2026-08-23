@@ -1,6 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+const VISUALIZE_COLORS = [
+  { id: 'c1', hex: '#dfc7a7', name: 'Warm Sand', desc: 'Warm, inviting and earthy.' },
+  { id: 'c2', hex: '#938c35', name: 'Olive Mist', desc: 'Soft, natural and calming.' },
+  { id: 'c3', hex: '#f1b27b', name: 'Soft Peach', desc: 'Gentle, soothing and cheerful.' },
+  { id: 'c4', hex: '#a4bdd3', name: 'Sky Blue', desc: 'Airy, fresh and expansive.' },
+  { id: 'c5', hex: '#b4b6b6', name: 'Stone Grey', desc: 'Modern, neutral and elegant.' },
+  { id: 'c6', hex: '#ffffff', name: 'Pure White', desc: 'Crisp, clean and timeless.' },
+];
 
 export default function HomePage() {
+  const navigate = useNavigate();
+  const [activeColor, setActiveColor] = useState(VISUALIZE_COLORS[1]);
   return (
     <>
 <div className="hero-section">
@@ -34,16 +46,16 @@ export default function HomePage() {
                         <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </Link>
-                <Link to="#" className="btn" style={{ background: '#25D366', color: '#fff', border: 'none', padding: '14px 28px', borderRadius: '30px', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 700, letterSpacing: '1px', textDecoration: 'none', boxShadow: '0 8px 24px rgba(37,211,102,0.3)' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                <Link to="#" className="btn btn-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="btn-icon">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
-                    <span className="btn-text" style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', lineHeight: 1.1 }}>
-                        <span style={{ fontSize: '15px', opacity: 0.9 }}>CONTACT US</span>
-                        
+                    <span className="btn-text">
+                        <span>CONTACT</span>
+                        <span>US</span>
                     </span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="arrow-icon" style={{ marginLeft: '4px' }}>
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="arrow-icon">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </Link>
             </div>
@@ -190,7 +202,7 @@ export default function HomePage() {
                     <div className="d-card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop" className="d-card-bg" alt="Interior" />
                     </div>
-                    <img src="assets/paint-box.png" className="d-card-bucket" alt="Bucket" />
+                    <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-royale-luxury-emulsion-asian-paints.png" className="d-card-bucket" alt="Bucket" />
                     <div className="d-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
                     <div className="d-card-content">
                         <h3 data-i18n="shopCategories.interior">INTERIOR PAINTS</h3>
@@ -203,7 +215,7 @@ export default function HomePage() {
                     <div className="d-card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" className="d-card-bg" alt="Exterior" />
                     </div>
-                    <img src="assets/paint-box.png" className="d-card-bucket" alt="Bucket" />
+                    <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/apcolite-premium-emulsion-new-packshot.png" className="d-card-bucket" alt="Bucket" />
                     <div className="d-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></div>
                     <div className="d-card-content">
                         <h3 data-i18n="shopCategories.exterior">EXTERIOR PAINTS</h3>
@@ -216,7 +228,7 @@ export default function HomePage() {
                     <div className="d-card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=800&auto=format&fit=crop" className="d-card-bg" alt="Waterproofing" />
                     </div>
-                    <img src="assets/paint-box.png" className="d-card-bucket" alt="Bucket" />
+                    <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/interior-walls-tractor-aqualock-asian-paints.png" className="d-card-bucket" alt="Bucket" />
                     <div className="d-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" /></svg></div>
                     <div className="d-card-content">
                         <h3 data-i18n="shopCategories.waterDesk">WATERPROOFING</h3>
@@ -229,7 +241,7 @@ export default function HomePage() {
                     <div className="d-card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?q=80&w=800&auto=format&fit=crop" className="d-card-bg" alt="Essentials" />
                     </div>
-                    <img src="assets/paint-box.png" className="d-card-bucket" alt="Bucket" />
+                    <img src="https://static.asianpaints.com/content/dam/asian_paints/products/packshots/Nilaya-Arc-Matt-new.png" className="d-card-bucket" alt="Bucket" />
                     <div className="d-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg></div>
                     <div className="d-card-content">
                         <h3 data-i18n="shopCategories.toolsDesk">PAINTING ESSENTIALS</h3>
@@ -289,7 +301,7 @@ export default function HomePage() {
                             <button className="pop-size-btn">10L</button>
                         </div>
                         
-                        <button className="pop-btn">
+                        <button className="pop-btn" onClick={() => navigate('/product-details.html?id=royale-luxury-emulsion')}>
                             <span data-i18n="popular.view">View Product</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </button>
@@ -322,7 +334,7 @@ export default function HomePage() {
                             <button className="pop-size-btn">10L</button>
                         </div>
                         
-                        <button className="pop-btn">
+                        <button className="pop-btn" onClick={() => navigate('/product-details.html?id=apex-ultima-protek')}>
                             <span data-i18n="popular.view">View Product</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </button>
@@ -355,7 +367,7 @@ export default function HomePage() {
                             <button className="pop-size-btn">10L</button>
                         </div>
                         
-                        <button className="pop-btn">
+                        <button className="pop-btn" onClick={() => navigate('/product-details.html?id=smartcare-damp-proof')}>
                             <span data-i18n="popular.view">View Product</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </button>
@@ -388,7 +400,7 @@ export default function HomePage() {
                             <button className="pop-size-btn">10L</button>
                         </div>
                         
-                        <button className="pop-btn">
+                        <button className="pop-btn" onClick={() => navigate('/product-details.html?id=tractor-emulsion')}>
                             <span data-i18n="popular.view">View Product</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </button>
@@ -407,7 +419,7 @@ export default function HomePage() {
     </section>
 
     {/* SECTION 4: VISUALIZER (SEE IT. LOVE IT. PAINT IT.) */}
-    <section className="vis-section" id="visualize">
+    <section className="vis-section" id="visualize" style={{ '--vis-theme-color': activeColor.id === 'c6' ? '#0b1120' : activeColor.hex } as React.CSSProperties}>
         <div className="vis-container">
             <div className="vis-layout">
                 {/* Left Content */}
@@ -444,32 +456,18 @@ export default function HomePage() {
                     <div className="vis-swatch-area">
                         <div className="vis-choose-title" data-i18n="vis.choose">Choose a colour</div>
                         <div className="vis-swatches">
-                            <div className="vis-swatch-item" data-color="#dfc7a7" data-name="Warm Sand" data-desc="Warm, inviting and earthy.">
-                                <div className="vis-swatch swatch-c1"></div>
-                                <span className="vis-swatch-label" data-i18n="vis.colors.c1">Warm Sand</span>
-                            </div>
-                            <div className="vis-swatch-item active" data-color="#938c35" data-name="Olive Mist" data-desc="Soft, natural and calming.">
-                                <div className="vis-swatch swatch-c2"></div>
-                                <span className="vis-swatch-label" data-i18n="vis.colors.c2">Olive Mist</span>
-                            </div>
-                            <div className="vis-swatch-item" data-color="#f1b27b" data-name="Soft Peach" data-desc="Gentle, soothing and cheerful.">
-                                <div className="vis-swatch swatch-c3"></div>
-                                <span className="vis-swatch-label" data-i18n="vis.colors.c3">Soft Peach</span>
-                            </div>
-                            <div className="vis-swatch-item" data-color="#a4bdd3" data-name="Sky Blue" data-desc="Airy, fresh and expansive.">
-                                <div className="vis-swatch swatch-c4"></div>
-                                <span className="vis-swatch-label" data-i18n="vis.colors.c4">Sky Blue</span>
-                            </div>
-                            <div className="vis-swatch-item" data-color="#b4b6b6" data-name="Stone Grey" data-desc="Modern, neutral and elegant.">
-                                <div className="vis-swatch swatch-c5"></div>
-                                <span className="vis-swatch-label" data-i18n="vis.colors.c5">Stone Grey</span>
-                            </div>
-                            <div className="vis-swatch-item" data-color="#ffffff" data-name="Pure White" data-desc="Crisp, clean and timeless.">
-                                <div className="vis-swatch swatch-c6"></div>
-                                <span className="vis-swatch-label" data-i18n="vis.colors.c6">Pure White</span>
-                            </div>
+                            {VISUALIZE_COLORS.map(color => (
+                                <div 
+                                    key={color.id}
+                                    className={`vis-swatch-item ${activeColor.id === color.id ? 'active' : ''}`} 
+                                    onClick={() => setActiveColor(color)}
+                                >
+                                    <div className={`vis-swatch swatch-${color.id}`} style={{ backgroundColor: color.hex }}></div>
+                                    <span className="vis-swatch-label" data-i18n={`vis.colors.${color.id}`}>{color.name}</span>
+                                </div>
+                            ))}
                         </div>
-                        <button className="vis-cta-btn">
+                        <button className="vis-cta-btn" onClick={() => navigate(`/product-details.html?id=color-${activeColor.id}&title=${encodeURIComponent(activeColor.name + ' Paint')}&price=1250`)}>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 12h20M15 5l7 7-7 7"/></svg>
                             <span data-i18n="vis.explore">Explore This Colour</span>
                         </button>
@@ -478,7 +476,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content (Image) */}
-                <div className="vis-right">
+                <div className="vis-right" style={{ backgroundColor: activeColor.hex }}>
                     <picture>
                         <source media="(min-width: 992px)" srcSet="./assets/bg-less-colour-changer-for-pc.png" />
                         <img src="./assets/bg-less-colour-changer-for-mobile.png" alt="Living Room Visualizer" className="vis-main-img" />
@@ -492,10 +490,10 @@ export default function HomePage() {
                     </div>
 
                     <div className="vis-overlay-bottom">
-                        <div className="vis-color-circle"></div>
+                        <div className="vis-color-circle" style={{ backgroundColor: activeColor.hex }}></div>
                         <div className="vis-color-info">
-                            <div className="vis-color-name" data-i18n="vis.colors.c2">Olive Mist</div>
-                            <div className="vis-color-desc" data-i18n="vis.colors.d2">Soft, natural and calming.</div>
+                            <div className="vis-color-name" data-i18n={`vis.colors.${activeColor.id}`}>{activeColor.name}</div>
+                            <div className="vis-color-desc" data-i18n={`vis.colors.d${activeColor.id.replace('c', '')}`}>{activeColor.desc}</div>
                         </div>
                         <div className="vis-heart">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>

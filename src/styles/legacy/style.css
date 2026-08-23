@@ -1,4 +1,4 @@
-* {
+:where(.app-container) * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -869,6 +869,8 @@ body {
     height: auto;
     position: relative;
     z-index: 2;
+    margin: 0 auto;
+    transform: translateX(12px); /* Visually center the image to offset right-side drop shadow */
 }
 .pop-float-icon {
     position: absolute;
@@ -1112,12 +1114,12 @@ body {
     font-size: 52px;
     font-weight: 900;
     line-height: 1.05;
-    color: #0b1120;
+    color: var(--vis-theme-color);
     margin-bottom: 20px;
-    letter-spacing: -1px;
+    transition: color 0.4s ease;
 }
 .vis-paint-it {
-    color: #111111;
+    color: var(--vis-theme-color);
     transition: color 0.4s ease;
 }
 .vis-subtitle {
@@ -1133,9 +1135,10 @@ body {
 .vis-divider {
     width: 48px;
     height: 4px;
-    background: #111111;
+    background: var(--vis-theme-color);
     border-radius: 2px;
     margin: 0 auto 32px auto;
+    transition: background 0.4s ease;
 }
 
 /* 2. Tabs */
@@ -1162,9 +1165,10 @@ body {
     transition: all 0.2s;
 }
 .vis-tab.active {
-    background: #111111;
+    background: var(--vis-theme-color);
     color: #fff;
-    border-color: #111111;
+    border-color: var(--vis-theme-color);
+    transition: all 0.4s ease;
 }
 .vis-tab.active svg { stroke: #fff; }
 
@@ -1276,8 +1280,9 @@ body {
 }
 .vis-swatch-item.active .vis-swatch {
     border: 2px solid #fff;
-    outline: 2px solid #111111;
+    outline: 2px solid var(--vis-theme-color);
     transform: scale(1.1);
+    transition: outline-color 0.4s ease;
 }
 .vis-swatch-label {
     font-size: 10px;
@@ -1298,19 +1303,19 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: #111111;
+    background: var(--vis-theme-color);
     color: #fff;
-    padding: 16px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    width: 100%;
     border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
     cursor: pointer;
-    margin-bottom: 12px;
-    transition: background 0.3s;
+    margin: 0 auto 16px auto;
+    transition: background 0.4s ease;
 }
-.vis-cta-btn:hover { background: #333333; }
+.vis-cta-btn:hover { opacity: 0.8; }
 .vis-cta-footer {
     font-size: 13px;
     color: #777;

@@ -1,11 +1,24 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import productsData from '../data/product-data';
+import { useEffect, useState } from 'react';
 import { useCart } from '../store/CartContext';
 
 export default function ShopPage() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
+  const [productsData, setProductsData] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          setProductsData(data);
+        }
+      })
+      .catch(err => {
+        console.error('Error fetching products:', err);
+      });
+  }, []);
 
   const handleProductClick = (id: string) => {
     navigate(`/product-details.html?id=${id}`);

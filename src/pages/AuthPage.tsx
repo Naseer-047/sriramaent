@@ -69,8 +69,8 @@ export default function AuthPage() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '100px 20px 60px', fontFamily: '"Inter", sans-serif' }}>
-      <div style={{ width: '100%', maxWidth: '440px', background: '#fff', borderRadius: '16px', border: '1px solid #eee', padding: '40px 32px', boxShadow: '0 8px 24px rgba(0,0,0,0.04)' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '100px 20px 60px', fontFamily: '"Inter", sans-serif', boxSizing: 'border-box' }}>
+      <div style={{ width: '100%', maxWidth: '440px', background: '#fff', borderRadius: '16px', border: '1px solid #eee', padding: '40px 32px', boxShadow: '0 8px 24px rgba(0,0,0,0.04)', boxSizing: 'border-box' }}>
         
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <div style={{ width: '48px', height: '48px', background: '#f6faee', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
@@ -107,7 +107,7 @@ export default function AuthPage() {
             
             <div style={{ marginBottom: '24px' }}>
               <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#111', marginBottom: '8px' }}>Phone Number</label>
-              <div style={{ display: 'flex' }}>
+              <div style={{ display: 'flex', width: '100%' }}>
                 <span style={{ display: 'flex', alignItems: 'center', padding: '0 16px', background: '#f9f9f9', border: '1px solid #ddd', borderRight: 'none', borderRadius: '8px 0 0 8px', fontSize: '15px', color: '#555', fontWeight: 600 }}>+91</span>
                 <input
                   type="tel"
@@ -115,7 +115,7 @@ export default function AuthPage() {
                   maxLength={10}
                   value={phone}
                   onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
-                  style={{ flex: 1, padding: '12px 16px', borderRadius: '0 8px 8px 0', border: '1px solid #ddd', fontSize: '15px', color: '#111', outline: 'none', transition: 'border-color 0.2s', boxSizing: 'border-box' }}
+                  style={{ flex: 1, minWidth: 0, width: '100%', padding: '12px 16px', borderRadius: '0 8px 8px 0', border: '1px solid #ddd', fontSize: '15px', color: '#111', outline: 'none', transition: 'border-color 0.2s', boxSizing: 'border-box' }}
                   required
                 />
               </div>
