@@ -18,6 +18,7 @@ const AdminProductEditor: React.FC = () => {
         draft, 
         initializeProduct, 
         updateField,
+        updateVariantField,
         isDirty, 
         isSaving, 
         saveChanges, 
