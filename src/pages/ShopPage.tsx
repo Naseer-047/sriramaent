@@ -10,7 +10,8 @@ export default function ShopPage() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch('/api/products')
+    const endpoint = import.meta.env.PROD ? `${import.meta.env.BASE_URL}api/products.json` : '/api/products';
+    fetch(endpoint)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

@@ -32,7 +32,8 @@ const AdminProductEditor: React.FC = () => {
         
         if (!productId) return;
         
-        fetch('/api/products')
+        const endpoint = import.meta.env.PROD ? `${import.meta.env.BASE_URL}api/products.json` : '/api/products';
+        fetch(endpoint)
             .then(res => res.json())
             .then(data => {
                 if (Array.isArray(data)) {
